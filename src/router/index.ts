@@ -10,8 +10,30 @@ export default createRouter({
         },
         {
             path: "/",
-            name: "home",
-            component: () => import('@/view/home/home.vue')
+            component: () => import('@/layout/index.vue'),
+            redirect: "/home",
+            children: [
+                {
+                    path: '/home',
+                    name: 'home',
+                    component: () => import('@/view/home/home.vue')
+                },
+                {
+                    path: '/focus',
+                    name: 'focus',
+                    component: () => import('@/view/home/home.vue')
+                },
+                {
+                    path: '/activity',
+                    name: 'activity',
+                    component: () => import('@/view/activity/activity.vue')
+                },
+                {
+                    path: '/community',
+                    name: 'community',
+                    component: () => import('@/view/home/home.vue')
+                },
+            ]
         },
     ]
 })
