@@ -1,11 +1,5 @@
-@forward '../../../node_modules/element-plus/theme-chalk/src/common/var.scss'with ( //覆盖样式
-  $colors: (
-    'primary': (
-      'base': #2546ff,
-    ),
-    'error': (
-      'base': green,
-    ),
+@forward '../../../node_modules/element-plus/theme-chalk/src/common/var.scss' with ($colors: ('primary': ('base': #2546ff),
+    'error': ('base': green),
   ),
   // $border-color: (
   //   '': (green)

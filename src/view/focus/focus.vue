@@ -1,8 +1,8 @@
 <template>
 	<div class="main-container">
 		<div class="top">
-			<img src="@/assets/layout/activity.png" alt="" class="title-pic">
-			<span class="title-name">活动</span>
+			<img src="@/assets/layout/focus.png" title="" class="title-pic">
+			<span class="title-name">热点</span>
 		</div>
 		<div class="content">
 			<div class="item" v-for="item in 12" :key="item">
@@ -174,4 +174,5 @@ import Utils from '@/utils/utils';
 	.page-class {
 		padding-bottom: 20px;
 	}
-}</style>
+}
+</style>

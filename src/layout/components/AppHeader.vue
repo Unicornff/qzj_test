@@ -19,7 +19,8 @@
 			</div>
 			<!-- theme -->
 			<div class="header-theme">
-				<el-switch v-model="theme" size="large" active-action-icon="Sunny" inactive-action-icon="Moon"></el-switch>
+				<el-switch v-model="isLight" size="large" active-action-icon="Sunny" inactive-action-icon="Moon"
+					@change="themeChange"></el-switch>
 			</div>
 			<!-- avatar -->
 			<div class="header-avatar">
@@ -54,8 +55,8 @@
 				</el-popover>
 			</div>
 		</div>
-		<svg-icon v-if="!store.fullScreen" class="fullScreen" name="fullScreen" color="#2546ff" width="25px" height="25px"
-			@click="fullScreen"></svg-icon>
+		<svg-icon v-if="!fullScreenStore.fullScreen" class="fullScreen" name="fullScreen" color="#2546ff" width="25px"
+			height="25px" @click="fullScreen"></svg-icon>
 		<svg-icon v-else class="fullScreen" name="cancelFullScreen" color="#2546ff" width="40px" height="40px"
 			@click="fullScreen"></svg-icon>
 	</div>
@@ -76,16 +77,17 @@ type ListInfo = {
 	component: any
 }
 
-import { reactive, ref, Ref, watch } from "vue";
+import { onMounted, reactive, ref, Ref, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import avatarUrl from '@/assets/layout/james.jpg';
 import useFullScreenStore from '@/store/fullScreen.ts'
+import useThemeStore from '@/store/theme.ts'
 
 const router = useRouter();
 const route = useRoute();
 const keyword: Ref<string> = ref("");
-const theme: Ref<boolean> = ref(true);
 const userName: Ref<string> = ref('落笔成念')
+const isLight: Ref<boolean> = ref(true)
 
 const arr_nav: Array<Nav> = reactive([
 	{
@@ -155,19 +157,32 @@ watch(route, (route: any) => {
 const jumpRoute = (name: string) => {
 	router.push({ name });
 };
+
 // 查询
 const search = () => { }
-const store = useFullScreenStore()
+
 // 全屏
+const fullScreenStore = useFullScreenStore()
 const fullScreen = () => {
-	if (store.fullScreen === false) {
-		document.body.requestFullscreen();
+	if (fullScreenStore.fullScreen === false) {
+		document.documentElement.requestFullscreen();
 	}
 	else {
 		document.exitFullscreen()
 	}
-	store.fullScreenAction();
+	fullScreenStore.fullScreenAction();
 }
+
+// 主题切换
+const themeStore = useThemeStore()
+const themeChange = () => {
+	themeStore.themeChange()
+}
+
+onMounted(() => {
+	themeStore.getTheme()
+	isLight.value = themeStore.isLight
+})
 </script>
 
 <style scoped lang="scss">
@@ -259,11 +274,10 @@ const fullScreen = () => {
 
 				.avatar-top-user {
 					margin-left: 20px;
-					font-size: 22px;
+					font-size: 20px;
 					font-weight: bold;
-					color: $base-color;
-					letter-spacing: 2px;
-					font-family: KaiTi
+					letter-spacing: 5px;
+					// font-family: KaiTi
 				}
 			}
 
@@ -287,7 +301,7 @@ const fullScreen = () => {
 					}
 
 					.item-name {
-						color: $base-color;
+						// color: $base-color;
 					}
 				}
 			}

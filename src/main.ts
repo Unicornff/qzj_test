@@ -1,7 +1,9 @@
 // 引入样式
+import 'element-plus/theme-chalk/dark/css-vars.css'
 import '@/style/index.scss'
 import ElementPlus from 'element-plus'
 import '@/style/element_module/element-variables.scss'  // 自制样式
+import '@/style/element_module/element-variables-dark.scss'  // 自制样式
 
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -11,6 +13,11 @@ import { createPinia } from 'pinia'
 
 const app = createApp(App)
 const pinia = createPinia()
+
+// 全局后置守卫
+router.afterEach(() => {
+    window.scrollTo(0, 0)    // 会到顶部
+})
 
 // 以 virtual: 作为虚拟模块的前缀
 import 'virtual:svg-icons-register'

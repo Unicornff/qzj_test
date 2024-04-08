@@ -1,0 +1,16 @@
+:root {
+    body[theme-mode="light"] {
+        $base-color: #000;
+        $base-gray-color: #999;
+        $base-background-color: #fff;
+        $base-background-gray-color: #FAFAFA;
+        $blue-color: #2546ff;
+    }
+    body[theme-mode="dark"] {
+        $base-color: #000;
+        $base-gray-color: #999;
+        $base-background-color: #fff;
+        $base-background-gray-color: #FAFAFA;
+        $blue-color: #2546ff;
+    }
+}

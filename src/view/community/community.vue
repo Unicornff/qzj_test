@@ -1,8 +1,8 @@
 <template>
 	<div class="main-container">
 		<div class="top">
-			<img src="@/assets/layout/home.png" alt="" class="title-pic">
-			<span class="title-name">首页</span>
+			<img src="@/assets/layout/community.png" alt="" class="title-pic">
+			<span class="title-name">社区</span>
 		</div>
 	</div>
 </template>
