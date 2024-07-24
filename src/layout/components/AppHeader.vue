@@ -24,7 +24,7 @@
 			</div>
 			<!-- avatar -->
 			<div class="header-avatar">
-				<el-popover placement="bottom-end" :width="260" trigger="click" :teleported="false">
+				<el-popover placement="bottom-end" :width="260" trigger="hover" :teleported="false">
 					<template #reference>
 						<el-avatar :size="40" :src="avatarUrl" />
 					</template>
@@ -108,6 +108,11 @@ const arr_nav: Array<Nav> = reactive([
 	{
 		name: "社区",
 		pathRouterName: "community",
+		active: false,
+	},
+	{
+		name: "测试",
+		pathRouterName: "testLog",
 		active: false,
 	},
 ]);
@@ -222,10 +227,12 @@ onMounted(() => {
 
 			.nav-item {
 				padding: 0 16px;
+				border-bottom: 2px solid #fff;
+				box-sizing: border-box;
 				height: 100%;
 				line-height: 60px;
 				cursor: pointer;
-				transition: all linear .2s;
+				transition: all .5s ease-in-out;
 
 				&:hover {
 					background-color: $base-background-gray-color;

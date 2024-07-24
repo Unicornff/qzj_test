@@ -174,4 +174,5 @@ import Utils from '@/utils/utils';
 	.page-class {
 		padding-bottom: 20px;
 	}
-}</style>
+}
+</style>

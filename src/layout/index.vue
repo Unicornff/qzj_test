@@ -3,7 +3,7 @@
 		<AppHeader></AppHeader>
 	</div>
 	<div class="app-content">
-		<router-view> </router-view>
+		<router-view></router-view>
 	</div>
 	<el-backtop :bottom="50" :right="50" :visibility-height="50">
 		<svg-icon name="backToTop" width="25px" height="25px" color="#2546ff"></svg-icon>
