@@ -1,7 +1,7 @@
 <template>
 	<div class="main-container">
 		<div class="top">
-			<img src="@/assets/layout/activity.png" alt="" class="title-pic">
+			<img src="@/assets/layout/activity.png" alt="" class="title-pic" />
 			<span class="title-name">活动</span>
 		</div>
 		<div class="content">
@@ -10,11 +10,13 @@
 					<div class="item-title nowrap">谷歌在中国推出Web.dev和Chrome for Developers网站</div>
 					<div class="item-content more-nowrap">
 						3 月 5 日，据谷歌“谷歌开发者”官方公众号报道，谷歌现已推出针对中国开发者的 Web.dev 和 Chrome for
-						Developers 网站，用户可通过.cn 域名直接访问。这一举措旨在为中国开发者提供更为便捷的资源获取渠道，并推动 Web 技术和 Chrome 浏览器的持续发展。
+						Developers 网站，用户可通过.cn
+						域名直接访问。这一举措旨在为中国开发者提供更为便捷的资源获取渠道，并推动 Web 技术和 Chrome
+						浏览器的持续发展。
 					</div>
 					<div class="item-describe">
 						<div class="desc-time">
-							{{ Utils.dateFormatString('2024-04-27', 'YYYY-MM-DD') }}
+							{{ proxy.$utils.dateFormatString("2024-04-27", "YYYY-MM-DD") }}
 						</div>
 						<div class="desc-view">
 							<el-icon size="16">
@@ -30,8 +32,11 @@
 					</div>
 				</div>
 				<div class="item-right">
-					<img src="https://static.extfans.com/sites-resource/extfans/article/4787/headpic0_1709717323184.png"
-						alt="" class="item-pic">
+					<img
+						src="https://static.extfans.com/sites-resource/extfans/article/4787/headpic0_1709717323184.png"
+						alt=""
+						class="item-pic"
+					/>
 				</div>
 			</div>
 		</div>
@@ -41,14 +46,14 @@
 	</div>
 </template>
 
-<script setup lang='ts'>
-import Utils from '@/utils/utils';
+<script setup lang="ts">
+// import Utils from '@/utils/utils';
+import { getCurrentInstance } from "vue";
+const { proxy }: any = getCurrentInstance();
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .main-container {
-	min-height: 110vh;
-
 	.top {
 		display: inline-flex;
 		align-items: center;
@@ -58,13 +63,13 @@ import Utils from '@/utils/utils';
 
 		.title-pic {
 			width: 140px;
-			height: 120px
+			height: 120px;
 		}
 
 		.title-name {
 			position: relative;
 			margin-left: 30px;
-			color: #2546FF;
+			color: #2546ff;
 			font-style: italic;
 			font-size: 20px;
 			font-weight: bold;
@@ -77,7 +82,7 @@ import Utils from '@/utils/utils';
 				left: -20px;
 				width: 5px;
 				height: 30px;
-				background-color: #2546FF
+				background-color: #2546ff;
 			}
 		}
 	}
@@ -97,7 +102,7 @@ import Utils from '@/utils/utils';
 			padding: 16px;
 			box-sizing: border-box;
 			border-radius: 16px;
-			width: calc((100% - 20px)/2);
+			width: calc((100% - 20px) / 2);
 			height: 200px;
 			background-color: #fff;
 			cursor: pointer;
@@ -107,7 +112,7 @@ import Utils from '@/utils/utils';
 			}
 
 			&:hover {
-				box-shadow: 0px 0px 12px rgba(0, 0, 0, .12)
+				box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 			}
 
 			.item-left {
@@ -124,13 +129,13 @@ import Utils from '@/utils/utils';
 				}
 
 				.item-content {
-					color: #8E8F9B;
+					color: #8e8f9b;
 					font-size: 13px;
 				}
 
 				.item-describe {
 					display: inline-flex;
-					color: #8E8F9B;
+					color: #8e8f9b;
 					font-size: 12px;
 
 					.desc-time {

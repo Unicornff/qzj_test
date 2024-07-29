@@ -7,8 +7,13 @@
 			</div>
 			<!-- nav -->
 			<div class="header-nav">
-				<div class="nav-item" v-for="item in arr_nav" :key="item.name" @click="jumpRoute(item.pathRouterName)"
-					:class="item.active ? 'active' : ''">
+				<div
+					class="nav-item"
+					v-for="item in arr_nav"
+					:key="item.name"
+					@click="jumpRoute(item.pathRouterName)"
+					:class="item.active ? 'active' : ''"
+				>
 					{{ item.name }}
 				</div>
 			</div>
@@ -19,8 +24,13 @@
 			</div>
 			<!-- theme -->
 			<div class="header-theme">
-				<el-switch v-model="isLight" size="large" active-action-icon="Sunny" inactive-action-icon="Moon"
-					@change="themeChange"></el-switch>
+				<el-switch
+					v-model="isLight"
+					size="large"
+					active-action-icon="Sunny"
+					inactive-action-icon="Moon"
+					@change="themeChange"
+				></el-switch>
 			</div>
 			<!-- avatar -->
 			<div class="header-avatar">
@@ -55,39 +65,53 @@
 				</el-popover>
 			</div>
 		</div>
-		<svg-icon v-if="!fullScreenStore.fullScreen" class="fullScreen" name="fullScreen" color="#2546ff" width="25px"
-			height="25px" @click="fullScreen"></svg-icon>
-		<svg-icon v-else class="fullScreen" name="cancelFullScreen" color="#2546ff" width="40px" height="40px"
-			@click="fullScreen"></svg-icon>
+		<svg-icon
+			v-if="!fullScreenStore.fullScreen"
+			class="fullScreen"
+			name="fullScreen"
+			color="#2546ff"
+			width="25px"
+			height="25px"
+			@click="fullScreen"
+		></svg-icon>
+		<svg-icon
+			v-else
+			class="fullScreen"
+			name="cancelFullScreen"
+			color="#2546ff"
+			width="40px"
+			height="40px"
+			@click="fullScreen"
+		></svg-icon>
 	</div>
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 type Nav = {
 	name: string;
 	pathRouterName: string;
 	active: boolean;
 };
 type UserInfo = {
-	number: number,
-	name: string
-}
+	number: number;
+	name: string;
+};
 type ListInfo = {
-	name: string,
-	component: any
-}
+	name: string;
+	component: any;
+};
 
 import { onMounted, reactive, ref, Ref, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
-import avatarUrl from '@/assets/layout/james.jpg';
-import useFullScreenStore from '@/store/fullScreen.ts'
-import useThemeStore from '@/store/theme.ts'
+import avatarUrl from "@/assets/layout/james.jpg";
+import useFullScreenStore from "@/store/fullScreen.ts";
+import useThemeStore from "@/store/theme.ts";
 
 const router = useRouter();
 const route = useRoute();
 const keyword: Ref<string> = ref("");
-const userName: Ref<string> = ref('落笔成念')
-const isLight: Ref<boolean> = ref(true)
+const userName: Ref<string> = ref("落笔成念");
+const isLight: Ref<boolean> = ref(true);
 
 const arr_nav: Array<Nav> = reactive([
 	{
@@ -112,7 +136,7 @@ const arr_nav: Array<Nav> = reactive([
 	},
 	{
 		name: "测试",
-		pathRouterName: "testLog",
+		pathRouterName: "test",
 		active: false,
 	},
 ]);
@@ -134,29 +158,32 @@ const userInfo: Array<UserInfo> = reactive([
 
 const listInfo: Array<ListInfo> = reactive([
 	{
-		name: '个人中心',
-		component: 'UserFilled'
+		name: "个人中心",
+		component: "UserFilled",
 	},
 	{
-		name: '我的足迹',
-		component: 'Promotion'
+		name: "我的足迹",
+		component: "Promotion",
 	},
 	{
-		name: '我的等级',
-		component: 'Histogram'
+		name: "我的等级",
+		component: "Histogram",
 	},
-])
+]);
 
-watch(route, (route: any) => {
-	arr_nav.forEach((item: Nav) => {
-		if (item.pathRouterName === route.name) {
-			item.active = true;
-		}
-		else {
-			item.active = false;
-		}
-	})
-}, { immediate: true })
+watch(
+	route,
+	(route: any) => {
+		arr_nav.forEach((item: Nav) => {
+			if (item.pathRouterName === route.name) {
+				item.active = true;
+			} else {
+				item.active = false;
+			}
+		});
+	},
+	{ immediate: true }
+);
 
 // 跳转路由
 const jumpRoute = (name: string) => {
@@ -164,30 +191,29 @@ const jumpRoute = (name: string) => {
 };
 
 // 查询
-const search = () => { }
+const search = () => {};
 
 // 全屏
-const fullScreenStore = useFullScreenStore()
+const fullScreenStore = useFullScreenStore();
 const fullScreen = () => {
 	if (fullScreenStore.fullScreen === false) {
 		document.documentElement.requestFullscreen();
-	}
-	else {
-		document.exitFullscreen()
+	} else {
+		document.exitFullscreen();
 	}
 	fullScreenStore.fullScreenAction();
-}
+};
 
 // 主题切换
-const themeStore = useThemeStore()
+const themeStore = useThemeStore();
 const themeChange = () => {
-	themeStore.themeChange()
-}
+	themeStore.themeChange();
+};
 
 onMounted(() => {
-	themeStore.getTheme()
-	isLight.value = themeStore.isLight
-})
+	themeStore.getTheme();
+	isLight.value = themeStore.isLight;
+});
 </script>
 
 <style scoped lang="scss">
@@ -232,7 +258,7 @@ onMounted(() => {
 				height: 100%;
 				line-height: 60px;
 				cursor: pointer;
-				transition: all .5s ease-in-out;
+				// transition: all 0.5s ease-in-out;
 
 				&:hover {
 					background-color: $base-background-gray-color;
@@ -329,7 +355,7 @@ onMounted(() => {
 					line-height: 36px;
 
 					&:hover {
-						background-color: #F0F0F5;
+						background-color: #f0f0f5;
 					}
 
 					span {

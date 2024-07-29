@@ -37,6 +37,8 @@ export default createRouter({
                     name: 'community',
                     component: () => import('@/view/community/Community.vue')
                 },
+
+
                 // 测试表格
                 {
                     path: '/test-table',
@@ -49,7 +51,13 @@ export default createRouter({
                     name: 'testLog',
                     component: () => import('@/view/test/test-log/TestLog.vue')
                 },
-                // 测试专用
+                // 测试文件
+                {
+                    path: '/test-file',
+                    name: 'testFile',
+                    component: () => import('@/view/test/test-file/TestFile.vue')
+                },
+                // 测试
                 {
                     path: '/test',
                     name: 'test',

@@ -9,7 +9,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from '@/router/index'
 import { createPinia } from 'pinia'
-// import Utils from './utils/utils'
+import Utils from './utils/utils'
 
 const app = createApp(App)
 const pinia = createPinia()
@@ -23,7 +23,7 @@ router.afterEach(() => {
 import 'virtual:svg-icons-register'
 
 // 注册公共方法到全局
-// app.config.globalProperties.$utils = Utils
+app.config.globalProperties.$utils = Utils
 
 // 引入全局组件
 import SvgIcon from '@/components/SvgIcon.vue'

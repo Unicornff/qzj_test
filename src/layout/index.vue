@@ -1,16 +1,18 @@
 <template>
-	<div class="app-header">
-		<AppHeader></AppHeader>
+	<div class="main-container">
+		<div class="app-header">
+			<AppHeader></AppHeader>
+		</div>
+		<div class="app-content">
+			<router-view></router-view>
+		</div>
+		<el-backtop :bottom="50" :right="50" :visibility-height="50">
+			<svg-icon name="backToTop" width="25px" height="25px" color="#2546ff"></svg-icon>
+		</el-backtop>
 	</div>
-	<div class="app-content">
-		<router-view></router-view>
-	</div>
-	<el-backtop :bottom="50" :right="50" :visibility-height="50">
-		<svg-icon name="backToTop" width="25px" height="25px" color="#2546ff"></svg-icon>
-	</el-backtop>
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import AppHeader from "./components/AppHeader.vue";
 </script>
 
@@ -21,9 +23,9 @@ import AppHeader from "./components/AppHeader.vue";
 }
 
 .app-content {
-	margin: 0 auto;
+	margin: 20px auto 0;
 	max-width: 1300px;
-	// height: calc(100% - 80px);
+	height: calc(100vh - 80px);
 	// overflow: hidden;
 }
 </style>
