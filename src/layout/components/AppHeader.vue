@@ -1,22 +1,14 @@
 <template>
-	<div class="header-class">
-		<div class="wrap-class">
-			<!-- logo -->
-			<div class="header-logo" @click="jumpRoute('home')">
-				<img src="../../assets/layout/logo.png" alt="" title="For Freedom 首页" />
-			</div>
-			<!-- nav -->
-			<div class="header-nav">
-				<div
-					class="nav-item"
-					v-for="item in arr_nav"
-					:key="item.name"
-					@click="jumpRoute(item.pathRouterName)"
-					:class="item.active ? 'active' : ''"
-				>
-					{{ item.name }}
-				</div>
-			</div>
+	<div class="header-class flex-row flex-center">
+		<!-- logo -->
+		<div class="header-logo" @click="jumpRoute('home')">
+			<img src="@/assets/layout/logo.png" alt="" title="For Freedom 首页" />
+		</div>
+		<!-- nav -->
+		<div class="header-nav">
+			<menulist></menulist>
+		</div>
+		<div class="header-right flex-row flex-center">
 			<!-- search -->
 			<div class="header-search">
 				<el-input v-model="keyword" placeholder="输入关键词搜索"></el-input>
@@ -32,6 +24,25 @@
 					@change="themeChange"
 				></el-switch>
 			</div>
+			<!-- fullScreen -->
+			<svg-icon
+				v-if="!fullScreenStore.fullScreen"
+				class="fullScreen"
+				name="fullScreen"
+				color="#2546ff"
+				width="25px"
+				height="25px"
+				@click="fullScreen"
+			></svg-icon>
+			<svg-icon
+				v-else
+				class="fullScreen"
+				name="cancelFullScreen"
+				color="#2546ff"
+				width="40px"
+				height="40px"
+				@click="fullScreen"
+			></svg-icon>
 			<!-- avatar -->
 			<div class="header-avatar">
 				<el-popover placement="bottom-end" :width="260" trigger="hover" :teleported="false">
@@ -65,83 +76,24 @@
 				</el-popover>
 			</div>
 		</div>
-		<svg-icon
-			v-if="!fullScreenStore.fullScreen"
-			class="fullScreen"
-			name="fullScreen"
-			color="#2546ff"
-			width="25px"
-			height="25px"
-			@click="fullScreen"
-		></svg-icon>
-		<svg-icon
-			v-else
-			class="fullScreen"
-			name="cancelFullScreen"
-			color="#2546ff"
-			width="40px"
-			height="40px"
-			@click="fullScreen"
-		></svg-icon>
 	</div>
 </template>
 
 <script setup lang="ts">
-type Nav = {
-	name: string;
-	pathRouterName: string;
-	active: boolean;
-};
-type UserInfo = {
-	number: number;
-	name: string;
-};
-type ListInfo = {
-	name: string;
-	component: any;
-};
-
-import { onMounted, reactive, ref, Ref, watch } from "vue";
-import { useRouter, useRoute } from "vue-router";
+import { onMounted, reactive, ref } from "vue";
+import { useRouter } from "vue-router";
 import avatarUrl from "@/assets/layout/james.jpg";
 import useFullScreenStore from "@/store/fullScreen.ts";
 import useThemeStore from "@/store/theme.ts";
+import menulist from "./menuList.vue";
 
 const router = useRouter();
-const route = useRoute();
-const keyword: Ref<string> = ref("");
-const userName: Ref<string> = ref("落笔成念");
-const isLight: Ref<boolean> = ref(true);
 
-const arr_nav: Array<Nav> = reactive([
-	{
-		name: "首页",
-		pathRouterName: "home",
-		active: true,
-	},
-	{
-		name: "热点",
-		pathRouterName: "focus",
-		active: false,
-	},
-	{
-		name: "活动",
-		pathRouterName: "activity",
-		active: false,
-	},
-	{
-		name: "社区",
-		pathRouterName: "community",
-		active: false,
-	},
-	{
-		name: "测试",
-		pathRouterName: "test",
-		active: false,
-	},
-]);
+const keyword = ref("");
+const userName = ref("落笔成念");
+const isLight = ref(true);
 
-const userInfo: Array<UserInfo> = reactive([
+const userInfo = reactive([
 	{
 		name: "关注",
 		number: 28,
@@ -156,7 +108,7 @@ const userInfo: Array<UserInfo> = reactive([
 	},
 ]);
 
-const listInfo: Array<ListInfo> = reactive([
+const listInfo = reactive([
 	{
 		name: "个人中心",
 		component: "UserFilled",
@@ -171,27 +123,13 @@ const listInfo: Array<ListInfo> = reactive([
 	},
 ]);
 
-watch(
-	route,
-	(route: any) => {
-		arr_nav.forEach((item: Nav) => {
-			if (item.pathRouterName === route.name) {
-				item.active = true;
-			} else {
-				item.active = false;
-			}
-		});
-	},
-	{ immediate: true }
-);
-
-// 跳转路由
-const jumpRoute = (name: string) => {
-	router.push({ name });
-};
-
 // 查询
 const search = () => {};
+
+// 跳转路由
+const jumpRoute = (name: any) => {
+	router.push({ name: name });
+};
 
 // 全屏
 const fullScreenStore = useFullScreenStore();
@@ -221,63 +159,38 @@ onMounted(() => {
 
 .header-class {
 	position: fixed;
-	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	height: 60px;
 	background-color: $base-background-color;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 	z-index: 9999;
-
-	.wrap-class {
-		min-width: 1300px;
-		margin: 0 auto;
+	.header-logo {
+		margin-left: 20px;
+		height: 55px;
 		display: inline-flex;
-		align-items: center;
 
-		.header-logo {
-			margin-right: 50px;
-			height: 55px;
-			display: inline-flex;
-
-			img {
-				width: 180px;
-				height: 100%;
-				cursor: pointer;
-			}
-		}
-
-		.header-nav {
-			display: inline-flex;
+		img {
+			width: 180px;
 			height: 100%;
-
-			.nav-item {
-				padding: 0 16px;
-				border-bottom: 2px solid #fff;
-				box-sizing: border-box;
-				height: 100%;
-				line-height: 60px;
-				cursor: pointer;
-				// transition: all 0.5s ease-in-out;
-
-				&:hover {
-					background-color: $base-background-gray-color;
-				}
-			}
-
-			.active {
-				border-bottom: 2px solid $blue-color;
-				background-color: $base-background-gray-color;
-			}
+			cursor: pointer;
 		}
+	}
 
+	.header-nav {
+		display: inline-flex;
+		width: 100%;
+		height: 100%;
+		margin: 0 100px 0 30px;
+	}
+
+	.header-right {
+		margin-right: 20px;
 		.header-search {
-			margin-right: 30px;
-			margin-left: auto;
 			display: inline-flex;
-
 			::v-deep(.el-input__wrapper) {
 				border-radius: 16px 0 0 16px;
+				width: 150px;
 			}
 
 			::v-deep(.el-button) {
@@ -287,7 +200,12 @@ onMounted(() => {
 		}
 
 		.header-theme {
-			margin-right: 30px;
+			margin: 0 20px;
+		}
+
+		.fullScreen {
+			margin-right: 20px;
+			cursor: pointer;
 		}
 
 		.header-avatar {
@@ -371,14 +289,6 @@ onMounted(() => {
 				width: 100%;
 			}
 		}
-	}
-
-	.fullScreen {
-		position: absolute;
-		right: 20px;
-		top: 50%;
-		transform: translateY(-50%);
-		cursor: pointer;
 	}
 }
 </style>

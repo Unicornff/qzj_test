@@ -23,9 +23,11 @@ import AppHeader from "./components/AppHeader.vue";
 }
 
 .app-content {
-	margin: 20px auto 0;
-	max-width: 1300px;
-	height: calc(100vh - 80px);
-	// overflow: hidden;
+	width: 100%;
+	height: calc(100vh - 60px);
+	padding: 16px;
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: #f0f2f5;
 }
 </style>

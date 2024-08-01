@@ -1,15 +1,18 @@
 // 颜色变量样式
 @import "./variables.scss";
 
+* {
+    margin: 0;
+}
+
 html,
 body,
 #app {
     margin: 0;
     width: 100%;
-    // height: 100vh;
+    height: 100vh;
     font-size: 14px;
-    // overflow: hidden;
-    // transition: all linear .3s;
+    overflow: hidden;
 }
 
 .light body {
@@ -102,5 +105,11 @@ body,
     word-break: break-all;
 }
 
+// 暗黑样式
+// @import url('./dark.scss');
+// 帮助布局样式
+@import url('./helper.scss');
 // 布局样式
 @import url('./layout.scss');
+// element-plus组件样式
+@import url('./element_module/element-components.scss');

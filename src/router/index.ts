@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import functionsRouter from './functions';
 
 export default createRouter({
     history: createWebHistory(),
@@ -37,32 +38,7 @@ export default createRouter({
                     name: 'community',
                     component: () => import('@/view/community/Community.vue')
                 },
-
-
-                // 测试表格
-                {
-                    path: '/test-table',
-                    name: 'testTable',
-                    component: () => import('@/view/test/test-table/TestTable.vue')
-                },
-                // 测试输出
-                {
-                    path: '/test-log',
-                    name: 'testLog',
-                    component: () => import('@/view/test/test-log/TestLog.vue')
-                },
-                // 测试文件
-                {
-                    path: '/test-file',
-                    name: 'testFile',
-                    component: () => import('@/view/test/test-file/TestFile.vue')
-                },
-                // 测试
-                {
-                    path: '/test',
-                    name: 'test',
-                    component: () => import('@/view/test/index.vue')
-                },
+                functionsRouter,
             ]
         },
     ]
