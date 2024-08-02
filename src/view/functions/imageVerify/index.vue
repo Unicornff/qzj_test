@@ -2,7 +2,7 @@
 	<div class="main-container box-padding box-bg-color">
 		<el-link type="primary" :underline="false" href="https://github.com/javaLuo/vue-puzzle-vcode/tree/vue3"
 			target="_blank">
-			Vcode (图形验证) 文档链接
+			Vcode 文档链接
 		</el-link>
 
 		<div class="vcode-class">

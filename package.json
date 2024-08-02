@@ -9,13 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@chenfengyuan/vue-qrcode": "2",
     "dayjs": "^1.11.10",
     "element-plus": "^2.6.2",
+    "jsbarcode": "^3.11.6",
     "lodash": "^4.17.21",
     "pinia": "^2.1.7",
+    "qrcode": "1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "vue": "^3.4.21",
+    "vue": "^3.4.35",
+    "vue-pdf-embed": "^2.1.0",
     "vue-router": "^4.3.0",
     "vue3-puzzle-vcode": "^1.1.7",
     "xlsx": "^0.18.5"

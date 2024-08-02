@@ -29,6 +29,30 @@ const arr_nav = [
                 pathRouterName: "exportExcel",
                 icon: '',
             },
+            {
+                id: '2-4',
+                name: "预览PDF",
+                pathRouterName: "previewPDF",
+                icon: '',
+            },
+            {
+                id: '2-5',
+                name: "条形码",
+                pathRouterName: "barCode",
+                icon: '',
+            },
+            {
+                id: '2-6',
+                name: "二维码",
+                pathRouterName: "qrCode",
+                icon: '',
+            },
+            {
+                id: '2-7',
+                name: "地图",
+                pathRouterName: "map",
+                icon: '',
+            },
         ]
     },
     {

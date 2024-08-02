@@ -164,7 +164,7 @@ onMounted(() => {
 	height: 60px;
 	background-color: $base-background-color;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-	z-index: 9999;
+	z-index: 2;
 	.header-logo {
 		margin-left: 20px;
 		height: 55px;

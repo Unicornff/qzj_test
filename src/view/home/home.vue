@@ -13,7 +13,7 @@ import { onMounted,ref } from 'vue';
 const number = ref(12345678.9)
 
 onMounted(() => {
-	console.log(number.value.toLocaleString());
+	// console.log(number.value.toLocaleString());
 })
 </script>
 

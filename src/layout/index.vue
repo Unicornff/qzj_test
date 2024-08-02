@@ -27,7 +27,7 @@ import AppHeader from "./components/AppHeader.vue";
 	height: calc(100vh - 60px);
 	padding: 16px;
 	box-sizing: border-box;
-	overflow: hidden;
+	overflow: auto;
 	background-color: #f0f2f5;
 }
 </style>
