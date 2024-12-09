@@ -53,6 +53,12 @@ const arr_nav = [
                 pathRouterName: "map",
                 icon: '',
             },
+            {
+                id: '2-8',
+                name: "文字省略",
+                pathRouterName: "textOverflow",
+                icon: '',
+            },
         ]
     },
     {

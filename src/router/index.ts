@@ -38,6 +38,7 @@ export default createRouter({
                     name: 'community',
                     component: () => import('@/view/community/Community.vue')
                 },
+                // 功能
                 functionsRouter,
             ]
         },

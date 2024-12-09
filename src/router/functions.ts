@@ -38,6 +38,11 @@ const functionsRouter =
             name: 'map',
             component: () => import('@/view/functions/map/index.vue')
         },
+        {
+            path: 'text-overflow',
+            name: 'textOverflow',
+            component: () => import('@/view/functions/textOverflow/index.vue')
+        },
     ]
 }
 
