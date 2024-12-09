@@ -63,7 +63,6 @@ const jumpRoute = (route: any) => {
 </script>
 
 <style scoped lang="scss">
-@import "../../style/variables.scss";
 
 ::v-deep(.el-menu) {
 	border-right: none !important;

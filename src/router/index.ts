@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
 import functionsRouter from './functions';
+import testRouter from './test';
 
 export default createRouter({
     history: createWebHistory(),
@@ -38,8 +39,16 @@ export default createRouter({
                     name: 'community',
                     component: () => import('@/view/community/Community.vue')
                 },
+                // 社区
+                {
+                    path: '/test',
+                    name: 'test',
+                    component: () => import('@/view/test/test-grid/TestGrid.vue')
+                },
                 // 功能
                 functionsRouter,
+                // 测试
+                testRouter
             ]
         },
     ]

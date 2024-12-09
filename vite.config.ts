@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from "path";
+import prismjs from 'vite-plugin-prismjs';
 const pathResolve = (dir: string) => path.resolve(__dirname, dir);
 console.log(process.env.NODE_ENV);
 
@@ -24,6 +25,20 @@ export default defineConfig({
 					}
 				]
 			}
+		}),
+		// 代码样式
+		prismjs({
+			languages: ['javascript', 'css', 'html', 'json', 'sass', 'scss', 'md', 'bash', 'shell', 'ts', 'markup'],
+			plugins: [
+				'toolbar',
+				'show-language',
+				'copy-to-clipboard',
+				'normalize-whitespace',
+				'line-numbers',
+				'unescaped-markup',
+			],
+			theme: 'tomorrow',
+			css: true
 		})
 	],
 	resolve: {

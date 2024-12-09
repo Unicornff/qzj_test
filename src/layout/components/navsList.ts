@@ -79,6 +79,50 @@ const arr_nav = [
         pathRouterName: "community",
         icon: 'Management',
     },
+    {
+        id: '6',
+        name: "测试",
+        pathRouterName: "",
+        icon: '',
+        children: [
+            {
+                id: '6-1',
+                name: "code",
+                pathRouterName: "testCode",
+                icon: '',
+            },
+            {
+                id: '6-2',
+                name: "file",
+                pathRouterName: "testFile",
+                icon: '',
+            },
+            {
+                id: '6-3',
+                name: "grid",
+                pathRouterName: "testGrid",
+                icon: '',
+            },
+            {
+                id: '6-4',
+                name: "layout",
+                pathRouterName: "testLayout",
+                icon: '',
+            },
+            {
+                id: '6-5',
+                name: "log",
+                pathRouterName: "testLog",
+                icon: '',
+            },
+            {
+                id: '6-6',
+                name: "page",
+                pathRouterName: "testPage",
+                icon: '',
+            },
+        ]
+    },
 ];
 
 export default arr_nav

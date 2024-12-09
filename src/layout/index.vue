@@ -29,5 +29,6 @@ import AppHeader from "./components/AppHeader.vue";
 	box-sizing: border-box;
 	overflow: auto;
 	background-color: #f0f2f5;
+	overflow-y: scroll;
 }
 </style>

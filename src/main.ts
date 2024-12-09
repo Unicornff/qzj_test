@@ -2,6 +2,7 @@
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import '@/style/index.scss'
 import ElementPlus from 'element-plus'
+import 'prismjs/themes/prism-okaidia.css' // 代码样式
 import '@/style/element_module/element-variables.scss'  // 自制样式
 import '@/style/element_module/element-variables-dark.scss'  // 自制样式
 

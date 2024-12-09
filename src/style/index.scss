@@ -105,6 +105,47 @@ body,
     word-break: break-all;
 }
 
+// 代码样式
+.code-class {
+    margin: 20px auto;
+    width: 700px;
+    height: auto;
+
+    h1,
+    h2,
+    h3 {
+        color: #000;
+    }
+
+    .toolbar {
+        opacity: 1 !important; // 始终显示操作栏
+
+        .toolbar-item {
+            margin-right: 5px;
+            cursor: pointer;
+
+            span {
+                padding: 2px 5px !important;
+                border-radius: 4px !important;
+            }
+
+            button {
+                padding: 2px 5px !important;
+                border-radius: 4px !important;
+                cursor: pointer;
+
+                &:focus {
+                    color: #bbb !important;
+                }
+            }
+
+            &:hover {
+                color: #fff !important;
+            }
+        }
+    }
+}
+
 // 暗黑样式
 // @import url('./dark.scss');
 // 帮助布局样式

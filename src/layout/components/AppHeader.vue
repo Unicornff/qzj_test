@@ -165,6 +165,7 @@ onMounted(() => {
 	background-color: $base-background-color;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 	z-index: 2;
+
 	.header-logo {
 		margin-left: 20px;
 		height: 55px;
@@ -186,8 +187,10 @@ onMounted(() => {
 
 	.header-right {
 		margin-right: 20px;
+
 		.header-search {
 			display: inline-flex;
+
 			::v-deep(.el-input__wrapper) {
 				border-radius: 16px 0 0 16px;
 				width: 150px;
