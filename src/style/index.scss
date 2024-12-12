@@ -107,9 +107,12 @@ body,
 
 // 代码样式
 .code-class {
-    margin: 20px auto;
-    width: 700px;
+    margin: 0 400px;
+    width: auto;
     height: auto;
+    padding: 32px;
+    border-radius: 4px;
+    background-color: #fff;
 
     h1,
     h2,

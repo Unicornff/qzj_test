@@ -34,7 +34,7 @@ import { onMounted, ref } from "vue";
 import Prism from "prismjs";
 
 const htmlCode = ref(
-	`
+`
 <div>Example</div>
 <div>Hello</div>
 `
@@ -42,7 +42,6 @@ const htmlCode = ref(
 
 onMounted(() => {
 	Prism.highlightAll();
-	console.log(Prism);
 });
 
 const escapeHtmlTags = (html: any) => {

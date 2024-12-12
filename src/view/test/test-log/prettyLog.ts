@@ -26,5 +26,5 @@ const prettyLog = () => {
     }
 }
 
-const log: any = prettyLog()
-export default log
+const selfLog: any = prettyLog()
+export default selfLog

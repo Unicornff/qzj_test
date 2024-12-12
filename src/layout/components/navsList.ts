@@ -59,6 +59,12 @@ const arr_nav = [
                 pathRouterName: "textOverflow",
                 icon: '',
             },
+            {
+                id: '2-9',
+                name: "虚拟列表",
+                pathRouterName: "virtualList",
+                icon: '',
+            },
         ]
     },
     {
