@@ -2,6 +2,7 @@
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import '@/style/index.scss'
 import ElementPlus from 'element-plus'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import 'prismjs/themes/prism-okaidia.css' // 代码样式
 import '@/style/element_module/element-variables.scss'  // 自制样式
 import '@/style/element_module/element-variables-dark.scss'  // 自制样式
@@ -63,4 +64,4 @@ Object.keys(ElIconModules).forEach(function (key) {
 })
 
 // 注册路由、状态管理工具、全局组件
-app.use(router).use(pinia).use(ElementPlus).component('svg-icon', SvgIcon).mount('#app')
+app.use(router).use(pinia).use(ElementPlus, { locale: zhCn }).component('svg-icon', SvgIcon).mount('#app')

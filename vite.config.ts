@@ -4,7 +4,6 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from "path";
 import prismjs from 'vite-plugin-prismjs';
 const pathResolve = (dir: string) => path.resolve(__dirname, dir);
-console.log(process.env.NODE_ENV);
 
 // https://cn.vitejs.dev/config/
 export default defineConfig({

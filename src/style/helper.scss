@@ -6,6 +6,16 @@
     height: 100%;
 }
 
+// 宽-100%
+.fullWidth {
+    width: 100%;
+}
+
+// 高-100%
+.fullHeigth {
+    height: 100%;
+}
+
 // 内边距
 .box-padding {
     padding: 16px;
@@ -32,5 +42,11 @@
 // 弹性盒子-内容水平垂直居中
 .flex-center {
     justify-content: center;
+    align-items: center;
+}
+
+// 弹性盒子-内容space-between垂直居中
+.flex-between {
+    justify-content: space-between;
     align-items: center;
 }

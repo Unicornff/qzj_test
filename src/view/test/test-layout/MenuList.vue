@@ -71,6 +71,7 @@ const jumpRoute = (route: any) => {
 	color: #000;
 
 	.el-menu-item,
+	.el-sub-menu,
 	.el-sub-menu__title {
 		margin: 10px 20px 0;
 		border-radius: 10px;
@@ -78,8 +79,8 @@ const jumpRoute = (route: any) => {
 		line-height: 46px !important;
 
 		&:hover {
-			background-color: #2546ff;
-			color: #fff;
+			background-color: #2546ff !important;
+			color: #fff !important;
 		}
 
 		svg {

@@ -1,5 +1,6 @@
 import dayjs from "dayjs"
 import { throttle, debounce, random } from 'lodash'
+import { v4 as uuidv4 } from 'uuid'
 
 class utils {
     // 节流
@@ -24,6 +25,11 @@ class utils {
     dateFormatDate = (time: any) => {
         let date = dayjs(time);
         return date.toDate();
+    }
+
+    // 获取随机id
+    getRandomUniqueId = () => {
+        return uuidv4()
     }
 }
 

@@ -28,11 +28,6 @@ const testRouter =
             name: 'testLog',
             component: () => import('@/view/test/test-log/TestLog.vue')
         },
-        {
-            path: 'testPage',
-            name: 'testPage',
-            component: () => import('@/view/test/test-page/testPage.vue')
-        },
     ]
 }
 

@@ -1,0 +1,50 @@
+// 颜色变量样式
+@import "./variables.scss";
+
+.dark body {
+    color: #CFD3DC;
+    background-color: #141414 !important;
+
+    // 头部
+    .header-class {
+        background-color: #141414;
+        border-bottom: 1px solid #4C4D4F;
+
+        .header-logo {
+            img {
+                filter: invert(100%);
+            }
+        }
+
+        .nav-item {
+            border-bottom: 2px solid #141414 !important;
+
+            &:hover {
+                background-color: #19222C !important;
+            }
+        }
+
+        .active {
+            border-bottom: 2px solid $blue-color !important;
+            background-color: #19222C !important;
+        }
+
+        .header-avatar {
+            .content-item {
+                &:hover {
+                    background-color: #1d3043 !important;
+                }
+            }
+        }
+    }
+
+    // 内容背景
+    .main-container {
+        .content {
+            .item {
+                background-color: #141414 !important;
+                border: 1px solid #4C4D4F;
+            }
+        }
+    }
+}

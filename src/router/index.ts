@@ -45,6 +45,12 @@ export default createRouter({
                     name: 'test',
                     component: () => import('@/view/test/test-grid/TestGrid.vue')
                 },
+                // 笔记
+                {
+                    path: '/notes',
+                    name: 'notes',
+                    component: () => import('@/view/notes/index.vue')
+                },
                 // 功能
                 functionsRouter,
                 // 测试

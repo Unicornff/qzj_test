@@ -20,54 +20,6 @@ body,
     color: $base-color;
 }
 
-.dark body {
-    color: #CFD3DC;
-    background-color: #141414 !important;
-
-    // 头部
-    .header-class {
-        background-color: #141414;
-        border-bottom: 1px solid #4C4D4F;
-
-        .header-logo {
-            img {
-                filter: invert(100%);
-            }
-        }
-
-        .nav-item {
-            border-bottom: 2px solid #141414 !important;
-
-            &:hover {
-                background-color: #19222C !important;
-            }
-        }
-
-        .active {
-            border-bottom: 2px solid $blue-color !important;
-            background-color: #19222C !important;
-        }
-
-        .header-avatar {
-            .content-item {
-                &:hover {
-                    background-color: #1d3043 !important;
-                }
-            }
-        }
-    }
-
-    // 内容背景
-    .main-container {
-        .content {
-            .item {
-                background-color: #141414 !important;
-                border: 1px solid #4C4D4F;
-            }
-        }
-    }
-}
-
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -82,7 +34,7 @@ body,
 /*定义滑块 内阴影+圆角*/
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background-color: #c4c4c4;
+    background-color: #bdbdbd;
 }
 
 .nowrap {
@@ -118,6 +70,9 @@ body,
     h2,
     h3 {
         color: #000;
+        .el-icon {
+            margin-right: 10px;
+        }
     }
 
     .toolbar {
@@ -150,7 +105,7 @@ body,
 }
 
 // 暗黑样式
-// @import url('./dark.scss');
+@import url('./dark.scss');
 // 帮助布局样式
 @import url('./helper.scss');
 // 布局样式

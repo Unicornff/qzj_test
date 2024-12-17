@@ -20,6 +20,8 @@
     "qrcode": "1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "uuid": "^11.0.3",
+    "vite-plugin-require-transform": "^1.0.21",
     "vue": "^3.4.35",
     "vue-pdf-embed": "^2.1.0",
     "vue-router": "^4.3.0",
