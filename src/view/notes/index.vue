@@ -29,13 +29,9 @@
                         {{ note.date || '------' }}
                     </span>
                 </h3>
-                <template v-if="note.noteType === 'img'">
-                    <div v-for="item in note.data" :key="item.dataId" class="img-class">
-                        <img :src="item.img" alt="">
-                    </div>
-                </template>
-                <template v-else>
-                    <pre class="line-numbers" v-for="item in note.data" :key="item.dataId">
+                <template v-for="item in note.data" :key="item.dataId">
+                    <!-- 代码区 -->
+                    <pre class="line-numbers" v-if="item.type !== 'img' && item.type !== 'text'">
                         <h4>{{ item.type }}</h4>
                         <code class="language-ts" v-if="item.type === 'ts'">
                             <div>{{ item.code }}</div>
@@ -47,6 +43,17 @@
                             <div>{{ item.code }}</div>
                         </code>
                     </pre>
+                    <!-- 文字区 -->
+                    <div class="text-class" v-if="item.type === 'text'">
+                        <p v-for="(lineText, index) in item.text" :key="index" :class="item.class">
+                            <span v-if="!item.class?.includes('link-class')">{{ lineText }}</span>
+                            <span v-else>参考链接：<a :href="lineText" target="_blank">{{ lineText }}</a></span>
+                        </p>
+                    </div>
+                    <!-- 图片区 -->
+                    <div class="img-class" v-if="item.type === 'img'">
+                        <img :src="item.img" alt="">
+                    </div>
                 </template>
                 <br>
             </div>
@@ -142,10 +149,41 @@ const escapeHtmlTags = (html: any) => {
         overflow-y: scroll;
         box-sizing: border-box;
 
+        .text-class {
+            color: #000000;
+            padding: 10px 25px;
+            margin: 10px 0;
+            border-left: 4px solid #007eff;
+            background-color: #ebfaff;
+            text-indent: 2em;
+
+            .title-class {
+                font-size: 15px;
+                font-weight: bold;
+                text-indent: 0;
+
+                a {
+                    color: #2291ff;
+                }
+            }
+        }
+
         .img-class {
             width: 100%;
+            padding: 0 50px;
             height: auto;
+            box-sizing: border-box;
+
+            img {
+                max-width: 100% !important;
+                margin: 0;
+            }
         }
     }
+}
+
+::v-deep(.el-empty) {
+    width: 100%;
+    height: 100%;
 }
 </style>

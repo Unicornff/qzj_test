@@ -254,9 +254,9 @@ onMounted(() => {
 						color: $blue-color;
 					}
 
-					.item-name {
+					// .item-name {
 						// color: $base-color;
-					}
+					// }
 				}
 			}
 

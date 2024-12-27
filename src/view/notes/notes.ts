@@ -1,5 +1,8 @@
 import Utils from '@/utils/utils'
-import img1 from '../../../image.png'
+import img1 from '@/assets/notes/img1.png'
+import img2 from '@/assets/notes/img2.png'
+import img3 from '@/assets/notes/img3.png'
+import img4 from '@/assets/notes/img4.png'
 
 const code1_ts = `
 // 解构赋值数组
@@ -32,7 +35,6 @@ console.log(result1); // 输出：默认值
 const result2 = value ?? '默认值'
 console.log(result2); // 输出：默认值
 `
-
 const code2_html = `
 /* 父组件 */
 <VirtualList :data="listData">
@@ -137,13 +139,27 @@ const code2_scss = `
 	height: 100%;
 }
 `
+const text1 = ['https://juejin.cn/post/6898630134530752520?searchId=20241225134540153E161EBA9DF8ACB408']
+const text2 = ['一、典型的 session 登陆/验证流程：']
+const text3 = ['① 浏览器登录发送账号密码，服务端查用户库，校验用户',
+	'② 服务端把用户登录状态存为 Session，生成一个 sessionId',
+	'③ 通过登录接口返回，把 sessionId set 到 cookie 上',
+	'④ 此后浏览器再请求业务接口，sessionId 随 cookie 带上',
+	'⑤ 服务端查 sessionId 校验 session',
+	'⑥ 成功后正常做业务处理，返回结果']
+const text4 = ['二、token 流程：']
+const text5 = ['① 用户登录，服务端校验账号密码，获得用户信息',
+	'② 把用户信息、token 配置编码成 token，通过 cookie set 到浏览器',
+	'③ 此后用户请求业务接口，通过 cookie 携带 token',
+	'④ 接口校验 token 有效性，进行正常业务接口处理']
+const text6 = ['refresh token 流程：']
+
 
 const notes: any = [
 	{
 		noteId: Utils.getRandomUniqueId(),
 		title: '解构赋值、map、filter、空值合并运算符（??）',
 		date: "2024-12-10",
-		noteType: 'code',
 		data: [
 			{
 				dataId: Utils.getRandomUniqueId(),
@@ -156,7 +172,6 @@ const notes: any = [
 		noteId: Utils.getRandomUniqueId(),
 		title: '虚拟列表',
 		date: "2024-12-13",
-		noteType: 'code',
 		data: [
 			{
 				dataId: Utils.getRandomUniqueId(),
@@ -179,14 +194,81 @@ const notes: any = [
 		noteId: Utils.getRandomUniqueId(),
 		title: '提交代码规范',
 		date: "2024-12-16",
-		noteType: 'img',
 		data: [
 			{
 				dataId: Utils.getRandomUniqueId(),
+				type: 'img',
 				img: img1
 			},
 		]
 	},
+	{
+		noteId: Utils.getRandomUniqueId(),
+		title: '单点登录',
+		date: "2024-12-25",
+		data: [
+			{
+				dataId: Utils.getRandomUniqueId(),
+				type: 'text',
+				text: text1,
+				class: ['link-class', 'title-class']
+			},
+			{
+				dataId: Utils.getRandomUniqueId(),
+				type: 'text',
+				text: text2,
+				class: ['title-class']
+			},
+			{
+				dataId: Utils.getRandomUniqueId(),
+				type: 'img',
+				img: img2,
+			},
+			{
+				dataId: Utils.getRandomUniqueId(),
+				type: 'text',
+				text: text3,
+			},
+			{
+				dataId: Utils.getRandomUniqueId(),
+				type: 'text',
+				text: text4,
+				class: ['title-class']
+			},
+			{
+				dataId: Utils.getRandomUniqueId(),
+				type: 'img',
+				img: img3,
+			},
+			{
+				dataId: Utils.getRandomUniqueId(),
+				type: 'text',
+				text: text5,
+			},
+			{
+				dataId: Utils.getRandomUniqueId(),
+				type: 'text',
+				text: text6,
+			},
+			{
+				dataId: Utils.getRandomUniqueId(),
+				type: 'img',
+				img: img4,
+			},
+		]
+	},
+	// {
+	// 	noteId: Utils.getRandomUniqueId(),
+	// 	title: '',
+	// 	date: "2024-12-26",
+	// 	data: [
+	// 		{
+	// 			dataId: Utils.getRandomUniqueId(),
+	// 			type: 'img',
+	// 			img: img1
+	// 		},
+	// 	]
+	// },
 ]
 
 export default notes
