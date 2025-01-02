@@ -17,37 +17,31 @@ export default createRouter({
             children: [
                 // 主页
                 {
-                    path: '/home',
+                    path: 'home',
                     name: 'home',
                     component: () => import('@/view/home/Home.vue')
                 },
                 // 热点
                 {
-                    path: '/focus',
+                    path: 'focus',
                     name: 'focus',
                     component: () => import('@/view/focus/Focus.vue')
                 },
                 // 活动
                 {
-                    path: '/activity',
-                    name: 'activity',
-                    component: () => import('@/view/activity/Activity.vue')
-                },
-                // 社区
-                {
-                    path: '/community',
+                    path: 'community',
                     name: 'community',
                     component: () => import('@/view/community/Community.vue')
                 },
-                // 社区
+                // threejs学习
                 {
-                    path: '/test',
-                    name: 'test',
-                    component: () => import('@/view/test/test-grid/TestGrid.vue')
+                    path: 'three-learn',
+                    name: 'threeLearn',
+                    component: () => import('@/view/threeLearn/index.vue')
                 },
                 // 笔记
                 {
-                    path: '/notes',
+                    path: 'notes',
                     name: 'notes',
                     component: () => import('@/view/notes/index.vue')
                 },

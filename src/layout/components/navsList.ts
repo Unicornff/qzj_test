@@ -13,15 +13,15 @@ const arr_nav = [
     },
     {
         id: '3',
-        name: "活动",
-        pathRouterName: "activity",
-        icon: 'TrendCharts',
-    },
-    {
-        id: '4',
         name: "社区",
         pathRouterName: "community",
         icon: 'Management',
+    },
+    {
+        id: '4',
+        name: "threejs",
+        pathRouterName: "threeLearn",
+        icon: 'VideoCameraFilled',
     },
     {
         id: '5',
