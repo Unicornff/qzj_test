@@ -61,28 +61,35 @@ const initThreeCanvas = () => {
 		controls = new OrbitControls(camera, renderer.domElement);
 		controls.enableDamping = true; // 将其设置为true以启用阻尼
 
-		// // 创建立方体
-		// const geometry = new THREE.BoxGeometry(2, 1, 1);
-		// const material = new THREE.MeshBasicMaterial({ color: 'skyblue' });
-		// cube = new THREE.Mesh(geometry, material);
-		// scene.add(cube);
+		// 创建立方体
+		const geometry = new THREE.BoxGeometry(1, 1, 1);
+		const material = new THREE.MeshPhongMaterial({ color: 'skyblue' });
+		cube = new THREE.Mesh(geometry, material);
+		scene.add(cube);
 
 		// 画线
-		const material = new THREE.LineBasicMaterial({ color: 'skyblue' });
+		const material_line = new THREE.LineBasicMaterial({ color: 'skyblue' });
 		const points = [];
 		points.push(new THREE.Vector3(-2, 0, 0));
 		points.push(new THREE.Vector3(0, 2, 0));
 		points.push(new THREE.Vector3(2, 0, 0));
-		const geometry = new THREE.BufferGeometry().setFromPoints(points);
-		const line = new THREE.Line(geometry, material);
+		const geometry_line = new THREE.BufferGeometry().setFromPoints(points);
+		const line = new THREE.Line(geometry_line, material_line);
 		scene.add(line);
+
+		// 灯光
+		const light_1 = new THREE.DirectionalLight(0xffffff, 3);
+		const light_2 = new THREE.DirectionalLight(0xffffff, 3);
+		light_1.position.set(0, 0, 3);
+		light_2.position.set(0, 0, -3);
+		scene.add(light_1, light_2);
 
 		// 创建坐标轴
 		const axesHelper = new THREE.AxesHelper(5);
 		scene.add(axesHelper);
 
 		// 设置相机的位置
-		camera.position.z = 10;
+		camera.position.z = 5;
 
 		// 启动动画
 		animate();
@@ -93,8 +100,8 @@ const initThreeCanvas = () => {
 const animate = () => {
 	controls.update();
 	animationFrameId = requestAnimationFrame(animate);
-	// cube.rotation.x += 0.01;
-	// cube.rotation.y += 0.01;
+	cube.rotation.x += 0.01;
+	cube.rotation.y += 0.01;
 	renderer.render(scene, camera);
 };
 
