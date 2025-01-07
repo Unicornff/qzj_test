@@ -29,7 +29,17 @@ class utils {
 
     // 获取随机id
     getRandomUniqueId = () => {
-        return uuidv4()
+        return uuidv4();
+    }
+
+    // 获取变量类型（返回小写的字符串）例：number boolean string array object null undefined function 
+    getVariableType = (variable: any) => {
+        return Object.prototype.toString.call(variable).slice(8, -1).toLowerCase();
+    }
+
+    // 利用new Set()数组去重
+    uniqueArray = (arr: Array<any>) => {
+        return new Set([...arr])
     }
 }
 

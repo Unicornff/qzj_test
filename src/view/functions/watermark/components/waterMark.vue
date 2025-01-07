@@ -8,9 +8,9 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, ref } from 'vue';
 defineOptions({
-	name: "WaterMark"
+	name: 'WaterMark',
 });
 
 interface WatermarkProps {
@@ -27,12 +27,12 @@ const watermarkedContainer = ref<HTMLElement | null>(null);
 
 const createWatermark = (
 	text: string,
-	options: { fontSize?: string; gradientColors?: string[]; rotate?: any; xGap?: any; yGap?: any }
+	options: { fontSize?: string; gradientColors?: string[]; rotate?: any; xGap?: any; yGap?: any },
 ) => {
-	const canvas = document.createElement("canvas");
-	const ctx = canvas.getContext("2d");
+	const canvas = document.createElement('canvas');
+	const ctx = canvas.getContext('2d');
 
-	if (!ctx) return "";
+	if (!ctx) return '';
 
 	// 设置画布尺寸
 	const blockWidth = 200; // 水印单个块的宽度
@@ -41,7 +41,7 @@ const createWatermark = (
 	canvas.width = blockWidth;
 	canvas.height = blockHeight;
 
-	const fontSize = options.fontSize || "24px";
+	const fontSize = options.fontSize || '24px';
 	const rotate = options.rotate || -10;
 	const xGap = options.xGap || 200; // x 间隔
 	const yGap = options.yGap || 200; // y 间隔
@@ -50,7 +50,7 @@ const createWatermark = (
 
 	if (options.gradientColors?.length !== 1) {
 		// 创建渐变颜色
-		const gradientColors = options.gradientColors || ["rgba(0, 0, 0, 0.1)", "rgba(0, 0, 0, 0.5)"];
+		const gradientColors = options.gradientColors || ['rgba(0, 0, 0, 0.1)', 'rgba(0, 0, 0, 0.5)'];
 		gradient = ctx.createLinearGradient(0, 0, blockWidth, blockHeight);
 
 		// 添加渐变颜色停点
@@ -63,8 +63,8 @@ const createWatermark = (
 
 	ctx.font = `${fontSize} Arial`;
 	ctx.fillStyle = gradient; // 使用渐变颜色
-	ctx.textAlign = "center";
-	ctx.textBaseline = "middle";
+	ctx.textAlign = 'center';
+	ctx.textBaseline = 'middle';
 
 	// 绘制水印
 	ctx.rotate((rotate * Math.PI) / 180);
@@ -75,10 +75,10 @@ const createWatermark = (
 	// ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 	// 创建一个更大的画布，用于重复水印
-	const largeCanvas = document.createElement("canvas");
-	const largeCtx = largeCanvas.getContext("2d");
+	const largeCanvas = document.createElement('canvas');
+	const largeCtx = largeCanvas.getContext('2d');
 
-	if (!largeCtx) return "";
+	if (!largeCtx) return '';
 
 	// 设定大画布的尺寸
 	largeCanvas.width = xGap * 2; // 调整为需要的宽度
@@ -91,7 +91,7 @@ const createWatermark = (
 		}
 	}
 
-	return largeCanvas.toDataURL("image/png");
+	return largeCanvas.toDataURL('image/png');
 };
 
 onMounted(() => {
@@ -105,28 +105,27 @@ onMounted(() => {
 			yGap: Number(props.yGap),
 		});
 
-		container.style.position = "relative";
-		container.style.width = "100%";
-		container.style.height = "100%";
+		container.style.position = 'relative';
+		container.style.width = '100%';
+		container.style.height = '100%';
 
 		container.style.backgroundImage = `url(${watermarkUrl})`;
-		container.style.backgroundSize = "auto"; // Use 'auto' to ensure background image covers container
-		container.style.backgroundRepeat = "repeat";
-		container.style.backgroundPosition = "0 0";
+		container.style.backgroundSize = 'auto'; // Use 'auto' to ensure background image covers container
+		container.style.backgroundRepeat = 'repeat';
+		container.style.backgroundPosition = '0 0';
 	}
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .watermarked-container {
 	position: relative;
 	width: 100%;
 	height: 100%;
-}
-
-.content {
-	position: relative;
-	z-index: 2;
-	padding: 20px;
+	.content {
+		position: relative;
+		z-index: 2;
+		padding: 20px;
+	}
 }
 </style>
