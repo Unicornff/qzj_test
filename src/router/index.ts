@@ -19,19 +19,19 @@ export default createRouter({
                 {
                     path: 'home',
                     name: 'home',
-                    component: () => import('@/view/home/Home.vue')
+                    component: () => import('@/view/home/home.vue')
                 },
                 // 热点
                 {
                     path: 'focus',
                     name: 'focus',
-                    component: () => import('@/view/focus/Focus.vue')
+                    component: () => import('@/view/focus/focus.vue')
                 },
                 // 活动
                 {
                     path: 'community',
                     name: 'community',
-                    component: () => import('@/view/community/Community.vue')
+                    component: () => import('@/view/community/community.vue')
                 },
                 // threejs学习
                 {
