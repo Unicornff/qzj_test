@@ -27,8 +27,8 @@ onMounted(() => {
 			age: 20,
 		},
 	};
-	let obj2 = {...obj1};
-	// let obj2 = JSON.parse(JSON.stringify(obj1));
+	// let obj2 = {...obj1}; // 浅拷贝
+	let obj2 = JSON.parse(JSON.stringify(obj1)); // 深拷贝
 	selfLog.info(obj1.info.age);
 	selfLog.info(obj2.info.age);
 	obj2.info.age = 30;
