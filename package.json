@@ -11,6 +11,7 @@
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
     "@chenfengyuan/vue-qrcode": "2",
+    "axios": "^1.7.9",
     "dayjs": "^1.11.10",
     "element-plus": "^2.6.2",
     "jsbarcode": "^3.11.6",
