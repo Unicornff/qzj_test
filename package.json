@@ -8,7 +8,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r https://github.com/Unicornff/qzj_test.git -b gh-pages"
+    "deploy": "gh-pages -d dist -r https://github.com/Unicornff/qzj_test.git -b deploy-branch"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
