@@ -1,1 +1,0 @@
-import{_ as e,o as c,c as n,h as s}from"./index-DD5jmKwl.js";const o="/qzj_test/assets/community-BGM0rxVl.png",a={},r={class:"main-container"};function i(l,t){return c(),n("div",r,t[0]||(t[0]=[s("div",{class:"top"},[s("img",{src:o,alt:"",class:"title-pic"}),s("span",{class:"title-name"},"社区")],-1)]))}const _=e(a,[["render",i]]);export{_ as default};
