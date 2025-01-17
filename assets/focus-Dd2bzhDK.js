@@ -1,1 +1,0 @@
-import{_ as t,o as c,c as o,h as s}from"./index-DvHHLLkF.js";const n=""+new URL("focus-DepsXXjR.png",import.meta.url).href,a={},r={class:"main-container"};function i(l,e){return c(),o("div",r,e[0]||(e[0]=[s("div",{class:"top"},[s("img",{src:n,title:"",class:"title-pic"}),s("span",{class:"title-name"},"热点")],-1)]))}const _=t(a,[["render",i]]);export{_ as default};
