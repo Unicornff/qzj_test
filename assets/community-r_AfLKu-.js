@@ -1,0 +1,1 @@
+import{_ as e,o as c,c as n,h as t}from"./index-DvHHLLkF.js";const o=""+new URL("community-BGM0rxVl.png",import.meta.url).href,a={},r={class:"main-container"};function i(m,s){return c(),n("div",r,s[0]||(s[0]=[t("div",{class:"top"},[t("img",{src:o,alt:"",class:"title-pic"}),t("span",{class:"title-name"},"社区")],-1)]))}const _=e(a,[["render",i]]);export{_ as default};
