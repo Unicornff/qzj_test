@@ -7,6 +7,7 @@ const pathResolve = (dir: string) => path.resolve(__dirname, dir);
 
 // https://cn.vitejs.dev/config/
 export default defineConfig({
+	base: '/qzj_test/', // github仓库名称
 	plugins: [
 		vue(),
 		// svg插件

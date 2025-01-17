@@ -3,7 +3,7 @@ import functionsRouter from './functions';
 import testRouter from './test';
 
 export default createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [
         {
             // vue2使用: *    vue3使用: pathMatch('*') 或者 :pathMatch('*')* 或者 :catchAll(.*)
