@@ -1,0 +1,1 @@
+import{_ as e,o as c,c as o,h as s}from"./index-DD5jmKwl.js";const a="/qzj_test/assets/focus-DepsXXjR.png",n={},r={class:"main-container"};function i(_,t){return c(),o("div",r,t[0]||(t[0]=[s("div",{class:"top"},[s("img",{src:a,title:"",class:"title-pic"}),s("span",{class:"title-name"},"热点")],-1)]))}const p=e(n,[["render",i]]);export{p as default};
