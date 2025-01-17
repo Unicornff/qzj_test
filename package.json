@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -r https://github.com/Unicornff/qzj_test.git -b gh-pages"
   },
   "dependencies": {
