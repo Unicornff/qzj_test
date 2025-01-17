@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist -r https://github.com/Unicornff/qzj_test.git -b gh-pages"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
@@ -34,6 +35,7 @@
     "@types/prismjs": "^1.26.5",
     "@vitejs/plugin-vue": "^5.0.4",
     "fast-glob": "^3.3.2",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-prismjs": "^0.0.11",
