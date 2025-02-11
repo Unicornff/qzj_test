@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
 import functionsRouter from './functions';
 import testRouter from './test';
+import threeRouter from "./threejs";
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -33,12 +34,6 @@ export default createRouter({
                     name: 'community',
                     component: () => import('@/view/community/community.vue')
                 },
-                // threejs学习
-                {
-                    path: 'three-learn',
-                    name: 'threeLearn',
-                    component: () => import('@/view/threeLearn/index.vue')
-                },
                 // 笔记
                 {
                     path: 'notes',
@@ -47,6 +42,8 @@ export default createRouter({
                 },
                 // 功能
                 functionsRouter,
+                // threejs
+                threeRouter,
                 // 测试
                 testRouter
             ]

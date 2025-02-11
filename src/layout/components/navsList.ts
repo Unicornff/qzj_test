@@ -20,8 +20,22 @@ const arr_nav = [
     {
         id: '4',
         name: "threejs",
-        pathRouterName: "threeLearn",
+        pathRouterName: "threejs",
         icon: 'VideoCameraFilled',
+        children: [
+            {
+                d: '4-1',
+                name: "threejs学习",
+                pathRouterName: "threejsLearn",
+                icon: '',
+            },
+            {
+                d: '4-2',
+                name: "地月演示",
+                pathRouterName: "earthMoon",
+                icon: '',
+            },
+        ]
     },
     {
         id: '5',
