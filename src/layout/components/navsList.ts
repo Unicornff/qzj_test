@@ -24,13 +24,13 @@ const arr_nav = [
         icon: 'VideoCameraFilled',
         children: [
             {
-                d: '4-1',
+                id: '4-1',
                 name: "threejs学习",
                 pathRouterName: "threejsLearn",
                 icon: '',
             },
             {
-                d: '4-2',
+                id: '4-2',
                 name: "地月演示",
                 pathRouterName: "earthMoon",
                 icon: '',

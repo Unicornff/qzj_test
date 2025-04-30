@@ -5,7 +5,7 @@
 			<li v-for="(i, index) in 9" :key="index" class="item-content">{{ i }}</li>
 		</ul>
 	</div>
-	<div class="code-class">
+	<!-- <div class="code-class">
 		<pre class="line-numbers">
 		<code class="language-css">
 			.item {
@@ -17,7 +17,7 @@
 			}
 		</code>
 	</pre>
-	</div>
+	</div> -->
 </template>
 
 <script setup lang="ts">
