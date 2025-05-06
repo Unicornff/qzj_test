@@ -1,6 +1,7 @@
 <template>
 	<div class="main-container box-padding box-bg-color">
-		<el-button type="primary" @click="exportExcel">导出文件</el-button>
+		<el-button type="primary" @click="exportExcel">导出下列表格</el-button>
+		<el-button type="primary" @click="exportStaticFile">下载public下的静态文件</el-button>
 		<el-table :data="tableData" border stripe style="margin-top: 10px" id="table-export">
 			<template v-for="(col, index) in columnData" :key="index">
 				<el-table-column v-if="!col.children" :label="col.label" :prop="col.value"></el-table-column>
@@ -16,141 +17,141 @@
 
 <script setup lang="ts">
 defineOptions({
-	name: "ExportExcel"
+	name: 'ExportExcel',
 });
-import { ref } from "vue";
+import { ref } from 'vue';
 // import exportArrayToExcel from "./exportExcel";
-import * as XLSX from 'xlsx'
-import columnTemplate from './columnTemplate.vue'
+import * as XLSX from 'xlsx';
+import columnTemplate from './columnTemplate.vue';
 
 const tableData = ref([
 	{
-		date: "2016-05-03",
-		name: "Tom",
-		state: "California",
-		city: "Los Angeles",
-		address: "No. 189, Grove St, Los Angeles",
-		zip: "CA 90036",
-		tag: "Home",
+		date: '2016-05-03',
+		name: 'Tom',
+		state: 'California',
+		city: 'Los Angeles',
+		address: 'No. 189, Grove St, Los Angeles',
+		zip: 'CA 90036',
+		tag: 'Home',
 	},
 	{
-		date: "2016-05-02",
-		name: "Tom",
-		state: "California",
-		city: "Los Angeles",
-		address: "No. 189, Grove St, Los Angeles",
-		zip: "CA 90036",
-		tag: "Office",
+		date: '2016-05-02',
+		name: 'Tom',
+		state: 'California',
+		city: 'Los Angeles',
+		address: 'No. 189, Grove St, Los Angeles',
+		zip: 'CA 90036',
+		tag: 'Office',
 	},
 	{
-		date: "2016-05-04",
-		name: "Tom",
-		state: "California",
-		city: "Los Angeles",
-		address: "No. 189, Grove St, Los Angeles",
-		zip: "CA 90036",
-		tag: "Home",
+		date: '2016-05-04',
+		name: 'Tom',
+		state: 'California',
+		city: 'Los Angeles',
+		address: 'No. 189, Grove St, Los Angeles',
+		zip: 'CA 90036',
+		tag: 'Home',
 	},
 	{
-		date: "2016-05-01",
-		name: "Tom",
-		state: "California",
-		city: "Los Angeles",
-		address: "No. 189, Grove St, Los Angeles",
-		zip: "CA 90036",
-		tag: "Office",
+		date: '2016-05-01',
+		name: 'Tom',
+		state: 'California',
+		city: 'Los Angeles',
+		address: 'No. 189, Grove St, Los Angeles',
+		zip: 'CA 90036',
+		tag: 'Office',
 	},
 	{
-		date: "2016-05-01",
-		name: "Tom",
-		state: "California",
-		city: "Los Angeles",
-		address: "No. 189, Grove St, Los Angeles",
-		zip: "CA 90036",
-		tag: "Office",
+		date: '2016-05-01',
+		name: 'Tom',
+		state: 'California',
+		city: 'Los Angeles',
+		address: 'No. 189, Grove St, Los Angeles',
+		zip: 'CA 90036',
+		tag: 'Office',
 	},
 	{
-		date: "2016-05-01",
-		name: "Tom",
-		state: "California",
-		city: "Los Angeles",
-		address: "No. 189, Grove St, Los Angeles",
-		zip: "CA 90036",
-		tag: "Office",
+		date: '2016-05-01',
+		name: 'Tom',
+		state: 'California',
+		city: 'Los Angeles',
+		address: 'No. 189, Grove St, Los Angeles',
+		zip: 'CA 90036',
+		tag: 'Office',
 	},
 	{
-		date: "2016-05-01",
-		name: "Tom",
-		state: "California",
-		city: "Los Angeles",
-		address: "No. 189, Grove St, Los Angeles",
-		zip: "CA 90036",
-		tag: "Office",
+		date: '2016-05-01',
+		name: 'Tom',
+		state: 'California',
+		city: 'Los Angeles',
+		address: 'No. 189, Grove St, Los Angeles',
+		zip: 'CA 90036',
+		tag: 'Office',
 	},
 	{
-		date: "2016-05-01",
-		name: "Tom",
-		state: "California",
-		city: "Los Angeles",
-		address: "No. 189, Grove St, Los Angeles",
-		zip: "CA 90036",
-		tag: "Office",
+		date: '2016-05-01',
+		name: 'Tom',
+		state: 'California',
+		city: 'Los Angeles',
+		address: 'No. 189, Grove St, Los Angeles',
+		zip: 'CA 90036',
+		tag: 'Office',
 	},
 ]);
 const columnData = ref([
 	{
-		label: "时间",
-		value: "date",
+		label: '时间',
+		value: 'date',
 	},
 	{
-		label: "test",
-		value: "test",
+		label: 'test',
+		value: 'test',
 		children: [
 			{
-				label: "test1",
-				value: "test1",
+				label: 'test1',
+				value: 'test1',
 			},
 			{
-				label: "test2",
-				value: "test2",
+				label: 'test2',
+				value: 'test2',
 			},
-		]
+		],
 	},
 	{
 		label: '资料',
 		value: '',
 		children: [
 			{
-				label: "姓名",
-				value: "name",
+				label: '姓名',
+				value: 'name',
 			},
 			{
-				label: "地址信息",
-				value: "",
+				label: '地址信息',
+				value: '',
 				children: [
 					{
-						label: "州",
-						value: "state",
+						label: '州',
+						value: 'state',
 					},
 					{
-						label: "城市",
-						value: "city",
+						label: '城市',
+						value: 'city',
 					},
 					{
-						label: "地址",
-						value: "address",
+						label: '地址',
+						value: 'address',
 					},
 					{
-						label: "邮编",
-						value: "zip",
+						label: '邮编',
+						value: 'zip',
 					},
-				]
-			}
-		]
+				],
+			},
+		],
 	},
 	{
-		label: "标签",
-		value: "tag",
+		label: '标签',
+		value: 'tag',
 	},
 ]);
 
@@ -176,13 +177,20 @@ const exportExcel = () => {
 	// };
 	// exportArrayToExcel(params);
 
+	const wb = XLSX.utils.table_to_book(document.getElementById('table-export'), {
+		raw: true,
+	});
+	XLSX.writeFile(wb, 'test' + '.xlsx');
+};
 
-	const wb = XLSX.utils.table_to_book(
-		document.getElementById('table-export'), {
-		raw: true
-	}
-	);
-	XLSX.writeFile(wb, 'test' + '.xlsx')
+const exportStaticFile = () => {
+	let a = document.createElement('a');
+	let fileName = 'test';
+	let fileType = '.xlsx';
+	const { origin, pathname } = window.location;
+	a.href = `${origin}${pathname}static/test.xlsx`;
+	a.download = fileName + fileType;
+	a.click();
 };
 </script>
 
