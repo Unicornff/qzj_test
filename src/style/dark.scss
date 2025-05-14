@@ -1,5 +1,5 @@
 // 颜色变量样式
-@import "./variables.scss";
+@use "./variables" as *;
 
 .dark body {
     color: #CFD3DC;

@@ -1,5 +1,15 @@
 // 颜色变量样式
-@import "./variables.scss";
+@use "./variables" as *;
+// 暗黑样式
+@use './dark' as *;
+// 帮助布局样式
+@use './helper' as *;
+// 布局样式
+@use './layout' as *;
+// element-plus组件样式
+@use './element_module/element-components' as *;
+// 地图样式
+@use './map' as *;
 
 * {
     margin: 0;
@@ -103,14 +113,3 @@ body,
         }
     }
 }
-
-// 暗黑样式
-@import url('./dark.scss');
-// 帮助布局样式
-@import url('./helper.scss');
-// 布局样式
-@import url('./layout.scss');
-// element-plus组件样式
-@import url('./element_module/element-components.scss');
-// 地图样式
-@import url('./map.scss');

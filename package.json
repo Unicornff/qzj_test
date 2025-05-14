@@ -13,6 +13,7 @@
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
     "@chenfengyuan/vue-qrcode": "2",
+    "@element-plus/icons-vue": "^2.3.1",
     "axios": "^1.7.9",
     "dayjs": "^1.11.10",
     "element-plus": "^2.6.2",
@@ -21,8 +22,6 @@
     "pinia": "^2.1.7",
     "prismjs": "^1.29.0",
     "qrcode": "1",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
     "three": "^0.171.0",
     "uuid": "^11.0.3",
     "vite-plugin-require-transform": "^1.0.21",
@@ -33,10 +32,13 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.16",
     "@types/prismjs": "^1.26.5",
     "@vitejs/plugin-vue": "^5.0.4",
     "fast-glob": "^3.3.2",
     "gh-pages": "^6.3.0",
+    "sass": "^1.88.0",
+    "sass-loader": "^16.0.5",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-prismjs": "^0.0.11",

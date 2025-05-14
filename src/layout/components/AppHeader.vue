@@ -155,7 +155,7 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-@import "../../style/variables.scss";
+@use "../../style/variables" as *;
 
 .header-class {
 	position: fixed;
