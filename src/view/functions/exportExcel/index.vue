@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container box-padding box-bg-color">
+	<div class="full-size box-padding box-bg-color">
 		<el-button type="primary" @click="exportExcel">导出下列表格</el-button>
 		<el-button type="primary" @click="exportStaticFile">下载public下的静态文件</el-button>
 		<el-table :data="tableData" border stripe style="margin-top: 10px" id="table-export">

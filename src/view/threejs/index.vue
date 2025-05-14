@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container flex-box flex-column">
+	<div class="full-size flex-box flex-column">
 		<div class="top">
 			<img src="@/assets/layout/activity.png" alt="" class="title-pic" />
 			<span class="title-name">three.js</span>

@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container box-padding box-bg-color">
+	<div class="full-size box-padding box-bg-color">
 		<OverflowTooltip :lineClamp="1" :width="200" placement="right">
 			这是一个非常长的单行文本，用来测试是否会超出盒子的宽度。
 		</OverflowTooltip>

@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container">
+	<div class="full-size">
 		<div class="filter-class">
 			<label>标题：</label>
 			<el-input v-model="filterParams.title" placeholder="请输入关键字" clearable style="width: 230px"></el-input>
@@ -125,7 +125,7 @@ const escapeHtmlTags = (html: any) => {
 </script>
 
 <style scoped lang="scss">
-.main-container {
+.full-size {
 	margin: 0 400px;
 	width: calc(100% - 800px);
 	height: 100%;

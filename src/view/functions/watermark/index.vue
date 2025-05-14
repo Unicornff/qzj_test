@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container box-padding box-bg-color">
+	<div class="full-size box-padding box-bg-color">
 		<waterMark text="测试一下" fontSize="16px" :gradientColors="arr" rotate="10" xGap="200" yGap="200">
 			<div>插槽内容</div>
 		</waterMark>

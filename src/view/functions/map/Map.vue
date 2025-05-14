@@ -1,5 +1,5 @@
 <template>
-    <div class='main-container'>
+    <div class='full-size'>
         <div>
             <span>关键字查询位置：</span>
             <input id="input_map" placeholder="请输入搜索内容" />

@@ -39,11 +39,6 @@ const functionsRouter =
             component: () => import('@/view/functions/map/index.vue')
         },
         {
-            path: 'text-overflow',
-            name: 'textOverflow',
-            component: () => import('@/view/functions/textOverflow/index.vue')
-        },
-        {
             path: 'virtual-list',
             name: 'virtualList',
             component: () => import('@/view/functions/virtualList/index.vue')

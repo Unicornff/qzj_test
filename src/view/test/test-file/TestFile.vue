@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container">
+	<div class="full-size">
 		<div class="operate-btn">
 			<el-button type="primary" size="default" @click="editFile">编辑文件</el-button>
 			<el-button type="primary" size="default" @click="saveFile">保存文件</el-button>
@@ -54,7 +54,7 @@ const saveFile = async () => {
 </script>
 
 <style scoped lang="scss">
-.main-container {
+.full-size {
 	.operate-btn {
 		width: 100%;
 		display: inline-flex;

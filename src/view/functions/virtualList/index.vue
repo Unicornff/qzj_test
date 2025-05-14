@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container box-padding">
+	<div class="full-size box-padding">
 		<VirtualList :data="listData">
 			<template #item="{ item, index }">
 				<div style="display: flex; align-items: center">

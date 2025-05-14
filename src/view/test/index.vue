@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container box-padding box-bg-color">
+	<div class="full-size box-padding box-bg-color">
 		<div>{{ msg }}</div>
 	</div>
 </template>

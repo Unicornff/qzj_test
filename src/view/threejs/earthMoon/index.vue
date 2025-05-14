@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container flex-box flex-column">
+	<div class="full-size flex-box flex-column">
 		<div class="bottom">
 			<div class="three-content" ref="earthMoonRef"></div>
 		</div>

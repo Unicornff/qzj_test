@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container">
+	<div class="full-size">
 		<div class="app-header">
 			<AppHeader></AppHeader>
 		</div>
@@ -29,6 +29,6 @@ import AppHeader from "./components/AppHeader.vue";
 	box-sizing: border-box;
 	overflow: auto;
 	background-color: #f0f2f5;
-	overflow-y: scroll;
+	// overflow-y: scroll;
 }
 </style>

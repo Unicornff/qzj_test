@@ -1,5 +1,5 @@
 <template>
-	<div class="main-container">
+	<div class="full-size">
 		<el-menu :default-active="menuIndex" :collapse="isCollapse" mode="horizontal" menu-trigger="click">
 			<menuTree :menu="menu" :active="menuIndex" @routeClick="jumpRoute"></menuTree>
 		</el-menu>

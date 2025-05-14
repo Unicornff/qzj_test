@@ -1,6 +1,6 @@
 <template>
 	<!-- 网格布局 -->
-	<div class="main-container">
+	<div class="full-size">
 		<ul class="list-content">
 			<li v-for="(i, index) in 9" :key="index" class="item-content">{{ i }}</li>
 		</ul>

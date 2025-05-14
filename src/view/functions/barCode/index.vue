@@ -1,5 +1,5 @@
 <template>
-    <div class='main-container box-padding box-bg-color'>
+    <div class='full-size box-padding box-bg-color'>
         <el-link type="primary" :underline="false" href="https://github.com/lindell/JsBarcode/wiki" target="_blank"
             style="margin-bottom: 20px;">
             jsbarcode 文档链接

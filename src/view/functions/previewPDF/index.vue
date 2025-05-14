@@ -1,5 +1,5 @@
 <template>
-    <div class='main-container box-padding box-bg-color'>
+    <div class='full-size box-padding box-bg-color'>
         <div class="upload-box">
             <el-upload accept=".pdf" drag :file-list="fileList" :auto-upload="false" show-file-list
                 :on-change="handleChange">
@@ -18,7 +18,7 @@
         </div>
 
         <div class="preview-box" v-loading="loading">
-            <VuePdfEmbed class="main-container" :page="currentPage" :source="source" @rendered="handleDocumentRender">
+            <VuePdfEmbed class="full-size" :page="currentPage" :source="source" @rendered="handleDocumentRender">
             </VuePdfEmbed>
         </div>
     </div>

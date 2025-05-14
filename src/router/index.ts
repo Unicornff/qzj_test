@@ -14,13 +14,13 @@ export default createRouter({
         {
             path: "/",
             component: () => import('@/layout/index.vue'),
-            redirect: "/home",
+            redirect: { name: 'myComponents' },
             children: [
-                // 主页
+                // 我的组件
                 {
-                    path: 'home',
-                    name: 'home',
-                    component: () => import('@/view/home/home.vue')
+                    path: '/myComponents',
+                    name: 'myComponents',
+                    component: () => import('@/view/myComponents/index.vue'),
                 },
                 // 热点
                 {

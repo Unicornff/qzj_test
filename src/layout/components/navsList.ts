@@ -1,9 +1,9 @@
 const arr_nav = [
     {
         id: '1',
-        name: "首页",
-        pathRouterName: "home",
-        icon: 'HomeFilled',
+        name: "我的组件",
+        pathRouterName: "myComponents",
+        icon: 'Menu',
     },
     {
         id: '2',
@@ -93,12 +93,6 @@ const arr_nav = [
             },
             {
                 id: '6-8',
-                name: "文字省略",
-                pathRouterName: "textOverflow",
-                icon: '',
-            },
-            {
-                id: '6-9',
                 name: "虚拟列表",
                 pathRouterName: "virtualList",
                 icon: '',
