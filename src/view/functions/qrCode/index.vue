@@ -1,6 +1,6 @@
 <template>
     <div class='full-size box-padding box-bg-color'>
-        <el-link type="primary" :underline="false" href="https://github.com/fengyuanchen/vue-qrcode/blob/main/src/README.md"
+        <el-link type="primary" underline="never" href="https://github.com/fengyuanchen/vue-qrcode/blob/main/src/README.md"
             target="_blank" style="margin-bottom: 20px;">
             vue-qrcode 文档链接
         </el-link>

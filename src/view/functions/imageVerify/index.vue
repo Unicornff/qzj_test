@@ -1,6 +1,6 @@
 <template>
 	<div class="full-size box-padding box-bg-color">
-		<el-link type="primary" :underline="false" href="https://github.com/javaLuo/vue-puzzle-vcode/tree/vue3"
+		<el-link type="primary" underline="never" href="https://github.com/javaLuo/vue-puzzle-vcode/tree/vue3"
 			target="_blank">
 			Vcode 文档链接
 		</el-link>

@@ -38,11 +38,6 @@ const functionsRouter =
             name: 'map',
             component: () => import('@/view/functions/map/index.vue')
         },
-        {
-            path: 'virtual-list',
-            name: 'virtualList',
-            component: () => import('@/view/functions/virtualList/index.vue')
-        },
     ]
 }
 

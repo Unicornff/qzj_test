@@ -17,6 +17,16 @@ const componentsList: Array<ComponentList> = [
         text: '分页表格',
         component: defineAsyncComponent(() => import('@/view/myComponents/paginatedTable/index.vue'))
     },
+    {
+        name: 'virtualList',
+        text: '虚拟列表(子项定高)',
+        component: defineAsyncComponent(() => import('@/view/myComponents/virtualList/index.vue'))
+    },
+    {
+        name: 'scrollLoadTable',
+        text: '滚动加载表格',
+        component: defineAsyncComponent(() => import('@/view/myComponents/scrollLoadTable/index.vue'))
+    }
 ];
 
 export { componentsList };

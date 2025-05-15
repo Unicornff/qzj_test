@@ -1,8 +1,8 @@
 <template>
 	<div class="header-class flex-row flex-center">
 		<!-- logo -->
-		<div class="header-logo" @click="jumpRoute('home')">
-			<img src="@/assets/layout/logo.png" alt="" title="For Freedom 首页" />
+		<div class="header-logo" @click="jumpRoute('myComponents')">
+			<img src="@/assets/layout/logo.png" alt="" title="For Freedom" />
 		</div>
 		<!-- nav -->
 		<div class="header-nav">

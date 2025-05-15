@@ -1,6 +1,6 @@
 <template>
     <div class='full-size box-padding box-bg-color'>
-        <el-link type="primary" :underline="false" href="https://github.com/lindell/JsBarcode/wiki" target="_blank"
+        <el-link type="primary" underline="never" href="https://github.com/lindell/JsBarcode/wiki" target="_blank"
             style="margin-bottom: 20px;">
             jsbarcode 文档链接
         </el-link>

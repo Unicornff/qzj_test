@@ -150,7 +150,8 @@ const handlePaginationChange = (pageNum: number, pageSize: number) => {
 	.el-table__body-wrapper {
 		height: calc(100% - 48px) !important;
 		overflow-y: scroll;
-		.el-scrollbar__bar.is-vertical {
+		.el-scrollbar__bar.is-vertical,
+		.el-scrollbar__bar.is-horizontal {
 			.el-scrollbar__thumb {
 				background-color: #003a92;
 				opacity: 1;

@@ -91,12 +91,6 @@ const arr_nav = [
                 pathRouterName: "map",
                 icon: '',
             },
-            {
-                id: '6-8',
-                name: "虚拟列表",
-                pathRouterName: "virtualList",
-                icon: '',
-            },
         ]
     },
     {

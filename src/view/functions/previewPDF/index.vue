@@ -10,7 +10,7 @@
             </el-upload>
             <div class="upload-btn flex-row flex-center">
                 <el-button type="primary" @click="previewFile" style="margin-right:20px">预览文件</el-button>
-                <el-link type="primary" :underline="false" href="https://github.com/hrynko/vue-pdf-embed" target="_blank">
+                <el-link type="primary" underline="never" href="https://github.com/hrynko/vue-pdf-embed" target="_blank">
                     vue-pdf-embed文档链接  （除了页面的预览功能还可实现 PDF 分页、放大、缩小、下载、打印）
                 </el-link>
 
