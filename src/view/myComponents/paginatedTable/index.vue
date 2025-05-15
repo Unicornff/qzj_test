@@ -9,8 +9,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import PaginatedTable from './PaginatedTable.vue';
+
+const timer = ref<number | null>(null);
 
 const tableData = ref([]);
 const loading = ref(false);
@@ -34,6 +36,11 @@ const staticData = [
 
 onMounted(() => {
 	getTableData();
+});
+onBeforeUnmount(() => {
+	if (timer.value) {
+		clearTimeout(timer.value);
+	}
 });
 
 const handlePaginationChange = (pageNum: number, pageSize: number) => {
