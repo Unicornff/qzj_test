@@ -38,6 +38,11 @@ const functionsRouter =
             name: 'map',
             component: () => import('@/view/functions/map/index.vue')
         },
+        {
+            path: 'web-worker',
+            name: 'webWorker',
+            component: () => import('@/view/functions/webWorker/index.vue')
+        },
     ]
 }
 

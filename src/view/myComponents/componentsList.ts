@@ -26,7 +26,7 @@ const componentsList: Array<ComponentList> = [
         name: 'scrollLoadTable',
         text: '滚动加载表格',
         component: defineAsyncComponent(() => import('@/view/myComponents/scrollLoadTable/index.vue'))
-    }
+    },
 ];
 
 export { componentsList };

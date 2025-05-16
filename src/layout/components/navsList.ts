@@ -5,18 +5,18 @@ const arr_nav = [
         pathRouterName: "myComponents",
         icon: 'Menu',
     },
-    {
-        id: '2',
-        name: "热点",
-        pathRouterName: "focus",
-        icon: 'Opportunity',
-    },
-    {
-        id: '3',
-        name: "社区",
-        pathRouterName: "community",
-        icon: 'Management',
-    },
+    // {
+    //     id: '2',
+    //     name: "热点",
+    //     pathRouterName: "focus",
+    //     icon: 'Opportunity',
+    // },
+    // {
+    //     id: '3',
+    //     name: "社区",
+    //     pathRouterName: "community",
+    //     icon: 'Management',
+    // },
     {
         id: '4',
         name: "threejs",
@@ -89,6 +89,12 @@ const arr_nav = [
                 id: '6-7',
                 name: "地图",
                 pathRouterName: "map",
+                icon: '',
+            },
+            {
+                id: '6-8',
+                name: "Web Worker",
+                pathRouterName: "webWorker",
                 icon: '',
             },
         ]
