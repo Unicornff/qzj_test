@@ -1,7 +1,7 @@
 <template>
 	<div class="full-size">
 		<div class="top">
-			<img src="@/assets/layout/home.png" alt="" class="title-pic" />
+			<img src="@/assets/layout/myComponents.png" alt="" class="title-pic" />
 			<span class="title-name">封装组件</span>
 		</div>
 		<div class="list-class">
