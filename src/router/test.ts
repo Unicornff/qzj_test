@@ -19,11 +19,6 @@ const testRouter =
             component: () => import('@/view/test/test-grid/TestGrid.vue')
         },
         {
-            path: 'testLayout',
-            name: 'testLayout',
-            component: () => import('@/view/test/test-layout/MenuList.vue')
-        },
-        {
             path: 'testLog',
             name: 'testLog',
             component: () => import('@/view/test/test-log/TestLog.vue')

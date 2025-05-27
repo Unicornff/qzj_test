@@ -125,12 +125,6 @@ const arr_nav = [
             },
             {
                 id: '7-4',
-                name: "layout",
-                pathRouterName: "testLayout",
-                icon: '',
-            },
-            {
-                id: '7-5',
                 name: "log",
                 pathRouterName: "testLog",
                 icon: '',
