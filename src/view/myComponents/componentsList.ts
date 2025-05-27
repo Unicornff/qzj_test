@@ -27,6 +27,16 @@ const componentsList: Array<ComponentList> = [
         text: '滚动加载表格',
         component: defineAsyncComponent(() => import('@/view/myComponents/scrollLoadTable/index.vue'))
     },
+    {
+        name: 'wheelHorizontalScroll',
+        text: '鼠标滚动控制横向滚动',
+        component: defineAsyncComponent(() => import('@/view/myComponents/wheelHorizontalScroll/index.vue'))
+    },
+    {
+        name: 'rightClickMenu',
+        text: '右键菜单',
+        component: defineAsyncComponent(() => import('@/view/myComponents/rightClickMenu/index.vue'))
+    },
 ];
 
 export { componentsList };
