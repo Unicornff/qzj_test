@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 // 下面是不使用webWorker的代码(页面直接卡死)
 // const sum = (n: number) => {
@@ -25,14 +25,22 @@ import { ref, onMounted } from 'vue';
 // });
 
 // 下面是使用webWorker的代码(不会阻塞页面,但是计算速度依旧是相同的)
+let worker: Worker | null = null;
 onMounted(() => {
-	const worker = new Worker(new URL('./worker.ts', import.meta.url));
+	worker = new Worker(new URL('./worker.ts', import.meta.url));
 
 	worker.postMessage(100000);
 	worker.onmessage = (e) => {
 		console.log(e.data);
 		console.log(Date.now());
 	};
+});
+
+onBeforeUnmount(() => {
+	if (worker) {
+		worker.terminate(); // ✅ 停止 Worker
+		worker = null;
+	}
 });
 </script>
 

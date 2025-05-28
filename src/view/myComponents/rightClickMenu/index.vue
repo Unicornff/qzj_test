@@ -40,13 +40,14 @@ const handleRightClick = (item: number) => {
 .can-right-click-container {
 	width: 100%;
 	height: 100%;
-	background-color: #ccc;
+	background-color: #dfdbdb;
 	.menu-container {
-		width: 100px;
+		width: auto;
 		height: auto;
 		background-color: #fff;
-		border-radius: 4px;
-		padding: 5px 0;
+		border-radius: 8px;
+		padding: 5px 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 		.menu-item {
 			width: 100px;
 			height: 30px;
@@ -54,13 +55,14 @@ const handleRightClick = (item: number) => {
 			text-align: center;
 			background-color: #fff;
 			margin-bottom: 5px;
+			border-radius: 4px;
 			cursor: pointer;
-			margin-bottom: 5px;
 			&:last-child {
 				margin-bottom: 0;
 			}
 			&:hover {
-				background-color: #eee;
+				background-color: #2546FF;
+				color: #fff;
 			}
 		}
 	}

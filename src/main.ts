@@ -12,9 +12,12 @@ import App from './App.vue'
 import router from '@/router/index'
 import { createPinia } from 'pinia'
 import Utils from './utils/utils'
+import sizeDirect from './directs/sizeDirect'
 
 const app = createApp(App)
 const pinia = createPinia()
+
+app.directive('size-ob', sizeDirect)
 
 // 全局后置守卫
 router.afterEach(() => {

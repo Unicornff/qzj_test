@@ -129,6 +129,12 @@ const arr_nav = [
                 pathRouterName: "testLog",
                 icon: '',
             },
+            {
+                id: '7-5',
+                name: "justTest",
+                pathRouterName: "justTest",
+                icon: '',
+            },
         ]
     },
 ];
