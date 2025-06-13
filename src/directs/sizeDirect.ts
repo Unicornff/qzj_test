@@ -13,7 +13,7 @@ const ob = new ResizeObserver((entries) => {
     }
 })
 
-export default {
+const sizeDirect = {
     mounted(el: HTMLElement, binding: any) {
         if (typeof binding.value !== 'function') {
             console.warn('v-size-ob expects a function as the value');
@@ -28,3 +28,5 @@ export default {
         weakMap.delete(el);
     },
 }
+
+export default sizeDirect;
