@@ -1,0 +1,1 @@
+import{_ as e,c,g as s,o}from"./index-BBVKY95c.js";const a="/qzj_test/assets/community-BGM0rxVl.png",n={},r={class:"full-size"};function i(l,t){return o(),c("div",r,t[0]||(t[0]=[s("div",{class:"top"},[s("img",{src:a,alt:"",class:"title-pic"}),s("span",{class:"title-name"},"社区")],-1)]))}const m=e(n,[["render",i]]);export{m as default};

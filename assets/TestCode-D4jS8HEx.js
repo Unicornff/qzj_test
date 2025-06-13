@@ -1,4 +1,4 @@
-import{P as l}from"./prism-tomorrow-C-rK5QYq.js";import{a as i,j as p,n as a,c as m,g as n,q as o,o as d}from"./index-CFNvAuOJ.js";const u={class:"code-class"},g={class:"line-numbers"},f={class:"language-html"},j=["innerHTML"],M=i({__name:"TestCode",setup(v){const r=p(`
+import{P as l}from"./prism-tomorrow-BrFI9x19.js";import{a as i,j as p,n as a,c as m,g as n,q as o,o as d}from"./index-BBVKY95c.js";const u={class:"code-class"},g={class:"line-numbers"},f={class:"language-html"},j=["innerHTML"],M=i({__name:"TestCode",setup(v){const r=p(`
 <div>Example</div>
 <div>Hello</div>
 `);a(()=>{l.highlightAll()});const e=t=>t.replace(/<[^>]*>/g,function(s){return s.replace(/</g,"&lt;").replace(/>/g,"&gt;")});return(t,s)=>(d(),m("div",u,[s[4]||(s[4]=n("h2",null,"页面代码区（使用prismjs）",-1)),s[5]||(s[5]=n("br",null,null,-1)),s[6]||(s[6]=n("h3",null,"html",-1)),n("pre",g,[s[2]||(s[2]=o("			")),n("code",f,[s[0]||(s[0]=o(`
